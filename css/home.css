@@ -1,0 +1,161 @@
+
+
+
+.whole{
+    background-color:white;
+    font-family:Verdana, sans-serif;
+    margin:0;
+    padding:0;
+}
+
+.homephoto{
+    opacity: 0.9;
+}
+.title-h{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 3rem;
+    text-align: justify;
+}
+.title-p{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.services li{
+    list-style: none;
+    text-align: center;
+    
+}
+
+.service i{
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.navbar-nav-home{
+    background-color: rgba(161, 199, 238, 0.438);
+}
+
+.footer {
+    background-color: rgb(37, 85, 122);
+    color: white;
+    margin:0;
+    padding: 0;
+    height: 30px;
+    line-height: 30px;
+}
+@media (min-width:320px){
+   
+    .navbar-custom img{
+        width: 163px;
+        height: 45px;
+    }
+    .services ul{
+        margin:0 40px 0 40px;
+        padding:10px;
+    }
+    .service li p{
+        text-align: center;
+    }
+    .title-h{
+        margin:10px;
+        font-size: 1.8em;        
+        
+    }
+    .title-p{
+        margin: 10px;
+        font-size: .7em;
+        
+    }
+    
+}
+@media (min-width:375px){
+    .services ul{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap:wrap;
+        margin:0 5px 0 5px;
+        padding:20px;
+    }
+}
+
+@media (min-width:768px){
+    .services ul{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap:wrap;
+        margin:0 100px 0 100px;
+        padding:20px;
+    }
+}
+@media  (min-width:992px)
+{
+    .title-h{
+        margin-top:20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 3rem;
+        text-align: justify;
+    }
+    .title-p{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 1.5rem;
+        text-align: justify;
+    }
+    .navbar-custom{
+        display: flex;
+        justify-content: flex-start;
+        margin:0;
+        padding:0;
+        align-content: center;
+        align-items: center;
+        background-color:  rgb(37, 85, 122);
+    }
+    .navbar-custom img{
+        width: 163px;
+        height: 45px;
+    }
+    .navbar-custom a{
+        float: left;
+        margin:5px;
+        padding-left:10px;
+        padding-right:40px;
+     }
+     .navbar-nav a:hover{
+        background-color: rgb(154, 195, 236);
+        text-decoration: none;
+     }
+     .navbar-custom ul{
+        display: flex;
+        align-items: center;
+        margin: 0;
+        height:45;    
+    }
+    
+    .navbar-custom li{
+        list-style: none;
+        color: white;
+        margin:10px;
+        text-decoration:none;   
+    }
+    .services ul{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap:wrap;
+        margin:0 300px 0 300px;
+        padding:20px;
+    }
+
+
+
+}
+
+

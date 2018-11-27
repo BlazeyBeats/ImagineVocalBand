@@ -1,0 +1,57 @@
+.navbar-nav-experiences{
+    background-color: rgba(161, 199, 238, 0.438);
+  }
+
+
+
+
+
+@media(min-width:320px){
+  .middle{
+    margin:40px 20px;
+}
+.shows{
+  font-size: 0.9em;
+  line-height: 2.2;
+  letter-spacing: 0.08em; 
+}
+
+}
+
+
+
+@media (min-width: 345px) { 
+  .middle{
+    margin:80px 40px;
+  }
+  .shows{
+    font-size: 1em;
+    line-height: 2.2;
+    letter-spacing: 0.09em; 
+  }
+}
+
+
+@media(min-width:768px){
+
+  .middle{
+    margin:80px 100px;
+  }
+  .shows{
+    font-size: 1em;
+    line-height: 2.4;
+    letter-spacing: 0.13em; 
+  }
+}
+
+
+@media (min-width:992px){
+  .middle{
+    margin:80px 150px;
+  }
+  .shows{
+    font-size: 1.1em;
+    line-height: 2.5;
+    letter-spacing: 0.15em; 
+  }
+}
