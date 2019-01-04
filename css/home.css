@@ -1,6 +1,3 @@
-
-
-
 .whole{
     background-color:white;
     font-family:Verdana, sans-serif;
@@ -12,11 +9,13 @@
     opacity: 0.9;
 }
 .title-h{
+    margin-top:20px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     font-size: 3rem;
     text-align: justify;
+  
 }
 .title-p{
     display: flex;
@@ -24,6 +23,7 @@
     flex-wrap: wrap;
     font-size: 1.5rem;
     text-align: justify;
+ 
 }
 
 .services li{
@@ -48,7 +48,13 @@
 }
 @media (min-width:320px){
    
- 
+    .content{
+        
+        margin-top:80px;
+    }
+    .homephoto {
+        margin-top:60px;
+    }
     .services ul{
         margin:0 40px 0 40px;
         padding:10px;
@@ -57,18 +63,19 @@
         text-align: center;
     }
     .title-h{
-        margin:10px;
+        margin:20px;
         font-size: 1.8em;        
         
     }
     .title-p{
-        margin: 10px;
+        margin: 20px;
         font-size: .7em;
         
     }
     
 }
 @media (min-width:375px){
+
     .services ul{
         display: flex;
         justify-content: space-between;

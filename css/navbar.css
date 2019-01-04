@@ -10,3 +10,7 @@
 .navbar-brand img {
     margin:8px;
 }
+
+@media (min-width: 768px) and (max-width: 1000px) {
+   .nav-font {font-size: 0.8em;}
+ }

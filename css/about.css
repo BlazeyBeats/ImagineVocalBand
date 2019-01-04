@@ -10,10 +10,13 @@
 }
 .article-chinese p{
     text-align: justify;  
+    font-family: Microsoft JhengHei;
 }
 .article-english p{
     text-align: justify; 
+    font-family: Microsoft JhengHei;
 }
+
 
 @media(min-width:320px){
     .middle{
@@ -24,6 +27,17 @@
         height:auto;
         margin-bottom:20px;
     }
+    .article-chinese p {
+        font-size: 0.8em;
+        line-height: 1.5;
+        letter-spacing: 0.2em; 
+    }
+    .article-english p {
+        line-height: 1.5;
+        letter-spacing: 0.05em; 
+        font-size: 0.8em;
+    }
+
 }
 
 @media (min-width: 345px) { 
@@ -37,7 +51,14 @@
         margin-bottom:20px;
    
     }
-    
+    .article-chinese p {
+        line-height: 1.4;
+        letter-spacing: 0.2em; 
+    }
+    .article-english p {
+        line-height: 1.4;
+        letter-spacing: 0.05em; 
+    }
 
 
 }
