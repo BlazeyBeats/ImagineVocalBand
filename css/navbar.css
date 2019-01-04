@@ -1,0 +1,12 @@
+.navbar-default{
+    background-color: rgb(37, 85, 122);
+    
+}
+.navbar-brand{
+    padding: 0;
+    padding-left:20px;
+    margin:0;   
+}
+.navbar-brand img {
+    margin:8px;
+}
