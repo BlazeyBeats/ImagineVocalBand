@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Imagine Vocal Band</title>
+    <link href="photos/icon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/media.css">
-    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel ="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         
 
@@ -15,19 +17,46 @@
 <body class="whole">
     <div class="middle">
     <header>
-        <nav class ="navbar navbar-custom navbar-fixed-top navigation container-fluid">
-            <a href="index.html"><img src="photos/Logo.JPG" alt width="163" height="45"></a>
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <a href="index.html"><li>HOME</li></a>
-                    <a href="about.html"><li>ABOUT</li></a>
-                    <a href="members.html"><li>MEMBERS</li></a>
-                    <a href="experiences.html"><li>EXPERIENCES</li></a>
-                    <a href="media.html" class="navbar-nav-media"><li>MEDIA</li></a>
-                </ul>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="row" id="myNavbar">
+                    <div class="navbar-header page-scroll">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <div id="icon-bars">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </div>
+                        </button>
+                        <a class="navbar-brand" href="index.html"><img src="photos/Logo.JPG" alt width="163" height="45"></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="mynavbar">
+                        <ul class="nav navbar-nav navbar-custom navbar-right">
+                           
+                            <li class="page-scroll">
+                                <a href="index.html" class="nav-font">HOME</a>
+                            </li>
+                            <li class="page-scroll">
+                                <a href="about.html"  class="nav-font">ABOUT</a>
+                            </li>
+                            <li class="page-scroll">
+                                <a href="members.html" class="nav-font">MEMBERS</a>
+                            </li>
+                            <li class="page-scroll">
+                                <a href="experiences.html" class="nav-font">EXPERIENCES</a>
+                            </li>
+                            <li class="page-scroll">
+                                <a href="media.html" class="nav-font">MEDIA</a>
+                            </li>
+                            <li class="page-scroll">
+                                <a href="contactus.html" class="nav-font">CONTACT US</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </nav>
-
     </header>
     <hr width="100%">
     <h1><b>Photos</b></h1>
@@ -93,7 +122,8 @@
             <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FTVBS42.work%2Fvideos%2F1968525096545723%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
     </div>
    
-
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
 </body>
 </html>
 
