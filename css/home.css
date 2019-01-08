@@ -1,6 +1,6 @@
 .whole{
     background-color:white;
-    font-family:Verdana, sans-serif;
+    
     margin:0;
     padding:0;
     
@@ -8,23 +8,29 @@
 
 .homephoto{
     opacity: 0.9;
+    margin-bottom:20px;
 }
 .title-h{
-    margin-top:20px;
+    font-family:Microsoft JhengHei;
+    margin-top:40px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     font-size: 3rem;
     text-align: justify;
+    line-height: 2;
+    letter-spacing: 0.14em; 
   
 }
 .title-p{
+    font-family:Microsoft JhengHei;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     font-size: 1.5rem;
     text-align: justify;
- 
+    margin-bottom:30px;
+    padding-bottom:30px;
 }
 
 .services li{
