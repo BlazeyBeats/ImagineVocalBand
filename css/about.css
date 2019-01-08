@@ -9,13 +9,33 @@
     margin:30px 20px;
 }
 .article-chinese p{
-    text-align: justify;  
+    text-align: justify;
     font-family: Microsoft JhengHei;
+    
 }
 .article-english p{
     text-align: justify; 
     font-family: Microsoft JhengHei;
+    
 }
+.article-japaness p{
+    text-align: justify; 
+    font-family: Microsoft JhengHei;
+  
+}
+
+.parallax-window {
+    min-height: 4em;
+    width:auto;
+    background: transparent;
+    color:#ffffff;
+    display: flex;
+    justify-content: center;
+    font-family: Microsoft JhengHei;
+    font-weight:900;
+    font-size:100px;
+}
+
 
 
 @media(min-width:320px){
@@ -26,18 +46,11 @@
         width:100%;
         height:auto;
         margin-bottom:20px;
+        margin-top:10px;
     }
-    .article-chinese p {
-        font-size: 0.8em;
-        line-height: 1.5;
-        letter-spacing: 0.2em; 
+    .skl{
+        height:20em;
     }
-    .article-english p {
-        line-height: 1.5;
-        letter-spacing: 0.05em; 
-        font-size: 0.8em;
-    }
-
 }
 
 @media (min-width: 345px) { 
@@ -46,24 +59,21 @@
         margin:80px 50px;
     }
     .selfie{
+        margin-top:10px;
         width:100%;
         height:auto; 
         margin-bottom:20px;
-   
     }
-    .article-chinese p {
-        line-height: 1.4;
-        letter-spacing: 0.2em; 
+    .skl{
+        height:20em;
     }
-    .article-english p {
-        line-height: 1.4;
-        letter-spacing: 0.05em; 
-    }
-
-
 }
 
-
+@media (min-width: 425px) { 
+    .skl{
+        height:20em;
+    }
+}
 
 
 
@@ -85,7 +95,7 @@
           margin-top:0;
           font-size: 0.9em;
           line-height: 1.4;
-          letter-spacing: 0.2em; 
+          letter-spacing: 0.1em; 
                 
       }
     .article-english{
@@ -107,6 +117,24 @@
     .middle{
         margin:80px 100px;
     }
+    .article-japaness{
+        display: flex;
+        justify-content: flex-start;
+        margin-top:10px;
+        margin-bottom:35px;
+      }
+      .article-japaness p {
+          display: flex;
+          margin:50px;
+          margin-right:20px;
+          margin-top:0;
+          font-size: 0.9em;
+          line-height: 1.4;
+          letter-spacing: 0.1em; 
+      }
+      .skl{
+          height:20em;
+      }
 }
 
 @media  (min-width:992px) {
@@ -123,12 +151,13 @@
    .article-chinese{
       display: flex;
       justify-content: flex-start;
-      margin-top:10px;
-      margin-bottom:35px;
+      margin-top:25px;
+     
     }
     .article-chinese p {
         display: flex;
         margin:50px;
+        margin-bottom:10px;
         margin-right:20px;
         margin-top:0;
         font-size: 1.1em;
@@ -140,7 +169,7 @@
         display: flex;
         justify-content: flex-start; 
         flex-direction: row-reverse;
-        margin-top:45px;
+        margin-top:25px;
       }
       .article-english p{
         display: flex;
@@ -150,7 +179,21 @@
         font-size: 0.95em;
         line-height: 2.4;
         letter-spacing: 0.14em; 
-            
+    }
+    .article-japaness{
+        display: flex;
+        justify-content: flex-start;
+        margin-top:25px;
+        
+      }
+      .article-japaness p{
+        display: flex;
+        margin:50px;
+        margin-right:20px;
+        margin-top:0;
+        font-size: 1.1em;
+        line-height: 2.7;
+        letter-spacing: 0.1em; 
     }
      
 }

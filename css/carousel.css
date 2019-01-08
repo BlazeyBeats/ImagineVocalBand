@@ -1,0 +1,36 @@
+.carouselborder img{
+    width: 700px;
+    margin-top:30px;
+    position: fixed;
+    margin: 5% auto; /* Will not center vertically and won't work in IE6/7. */
+    top: 50%;
+    left: 50%;
+    margin-top: -250px; /* Negative half of height. */
+    margin-left: -350px; /* Negative half of width. */  
+    z-index: 2;
+   padding:10px;
+}
+.carouselbackground{
+    position: fixed;
+    opacity: 0.8;
+    top: 0%;    
+    z-index: 1;
+   
+}
+.slick-dots li button:before {
+    color: rgb(193, 227, 255);
+  }
+  .slick-dots li.slick-active button:before {
+    color:rgb(250, 250, 250) !important;
+}
+
+.slider-nav img {
+    height: auto;
+    max-width: 100%;
+}
+
+@media (min-width:320px) and (max-width:750px){
+    #carouselborder img {display: none !important ;}
+    #carouselbackground {display: none !important;}
+}
+  

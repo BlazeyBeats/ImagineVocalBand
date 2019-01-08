@@ -1,0 +1,98 @@
+button{
+    background-color: #2c3e50;
+    color:#ffffff;
+    border-radius: 3px;
+    font-family: Microsoft JhengHei;
+}
+.shows{width:100%;
+    justify-content: center;
+}
+.mes{   
+    display: inline-flex;
+    background-color: rgb(224, 238, 245);
+    border-radius: 3px;
+    padding: 10px;
+    margin: 1%;
+    width: 220px;
+    height:220px;
+    font-family: Microsoft JhengHei;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.middle{
+    margin:70px;
+  }
+
+.time{display: flex;
+    flex-direction: row-reverse;
+}
+
+.chat{
+    display: flex;
+    flex-direction: row;
+}
+h4{ font-family: Microsoft JhengHei;}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  
+  .animated:hover {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+  
+
+@media(min-width:320px){
+    .middle{
+        margin:40px 20px;
+    }
+    .selfie{
+        width:100%;
+        height:auto;
+        margin-bottom:20px;
+    }
+    .mes{    
+        width: 280px;
+        height:280px;}
+}
+
+@media (min-width: 375px) { 
+    .middle{
+        margin:80px 35px;
+    }
+    .mes{    
+        width: 305px;
+        height:305px;}
+}
+
+@media (min-width: 425px) { 
+    .mes{    
+        width: 170px;
+        height:170px;}
+}
+
+@media (min-width: 768px) { 
+    .middle{
+        margin:80px ;}
+    .mes{    
+        width: 190px;
+        height:190px;}
+}
+
+@media (min-width:992px){
+    .middle{
+      margin:80px 150px;
+    }
+}
+
+@media (min-width: 1024px) { 
+    .middle{
+        margin:80px ;}
+    .mes{    
+    width: 250px;
+    height:250px;}
+}

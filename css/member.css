@@ -1,9 +1,11 @@
-body{
-  background-image: url(../photos/everyonesback.JPG);
-  background-position: center;
-  background-size: cover;
-  background-attachment:fixed;  
+.parallax-window {
+  min-height: 400px;
+  background: transparent;
 }
+
+
+
+
 
 
 .navbar-nav-members{
@@ -28,20 +30,20 @@ body{
 
 .ty{
     background-color: rgb(106, 47, 121);
-    
     margin-top:50px;
+    overflow: hidden;
   }
   .jessica{
     background-color: rgb(219, 148, 210);
-    
+    overflow: hidden;
   }
   .jim{
     background-color: rgb(63, 122, 189);
-    
+    overflow: hidden;
   }
   .watermelon{
     background-color: rgb(35, 148, 73);
-    
+    overflow: hidden;
   }
   .watermelon a{
     text-decoration: none;
@@ -52,19 +54,21 @@ body{
   }
   .bob{
     background-color: rgb(11, 12, 12);
-    
+    overflow: hidden;
   }
   .leo{
     background-color: rgb(243, 144, 31);
-    
+    overflow: hidden;
   }
 
   .blazey{
     background-color: rgb(134, 48, 48);
     margin-bottom: 50px;
+    overflow: hidden;
+    
   }
 
-  @media(min-width:320px){
+  @media(min-width:320px) and (max-width:345px){
     .introduction{
       margin-top:50px;
       overflow: auto;
@@ -104,7 +108,7 @@ body{
 
 
 
-@media (min-width: 345px) { 
+@media (min-width: 345px) and (max-width:768px){ 
   .introduction{
     margin-top:50px;
     overflow: auto;
@@ -139,10 +143,11 @@ body{
     letter-spacing: 0.11em;
     line-height: 1.3;
 }
+
 }
 
 
-@media(min-width:768px){
+@media(min-width:768px)and (max-width:992px){
   
   .introduction{
     margin-top:50px;
@@ -177,9 +182,11 @@ body{
     letter-spacing: 0.13em;
     line-height: 1.25;
 }
+
+
 }
 
-@media (min-width:992px){
+@media (min-width:992px) {
 
   .introduction{
     margin-top:50px;
@@ -214,6 +221,8 @@ body{
     letter-spacing: 0.15em;
     line-height: 1.4;
 }
+
+
 
 }
 
