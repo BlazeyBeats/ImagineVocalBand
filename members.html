@@ -9,11 +9,24 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/member.css">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link rel ="stylesheet" href="css/navbar.css">
-
+    <link rel ="stylesheet" href="css/navbar.css">  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+     <script src="parallax.js-1.5.0/parallax.min.js"></script>
+     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script type="text/javascript">
+        var s = skrollr.init();
+        </script>
+     
+    
 </head>
 <body class="whole">
-    <div class="middle">
+        <div class="middle">
+        <div class="parallax-window" data-parallax="scroll" data-image-src="photos/everyonesback.JPG" >
+   
     <header>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -32,9 +45,7 @@
                     <div class="collapse navbar-collapse" id="mynavbar">
                         <ul class="nav navbar-nav navbar-custom navbar-right">
                            
-                            <li class="page-scroll">
-                                <a href="index.html" class="nav-font">HOME</a>
-                            </li>
+                            
                             <li class="page-scroll">
                                 <a href="about.html"  class="nav-font">ABOUT</a>
                             </li>
@@ -48,7 +59,7 @@
                                 <a href="media.html" class="nav-font">MEDIA</a>
                             </li>
                             <li class="page-scroll">
-                                <a href="contactus.html" class="nav-font">CONTACT US</a>
+                                <a href="contactus.html" class="nav-font">MESSAGE BOARD</a>
                             </li>
                         </ul>
                     </div>
@@ -57,8 +68,8 @@
         </nav>
     </header>
     
-    <div class="introduction container-fluid">
-        <div class="ty content">
+    <div class="introduction container-fluid animated slideInUp" >
+        <div id="ty" class="ty content wow pulse">
             
             <a href="https://www.instagram.com/ty_900605/" target="_blank"><img src="photos/Ty.jpg" width="100%" class="img-circle"></a>
             <h1>張彤宇</h1>
@@ -71,7 +82,7 @@
             </p>
         
         </div>
-        <div class="jessica">
+        <div id="jessica" class="jessica  wow pulse">
             <a href="https://www.instagram.com/jes0990sica/" target="_blank"><img src="photos/jessica.PNG" width="100%" class="img-circle"></a>
             <h1>王采潔</h1>
             <p>
@@ -81,7 +92,7 @@
                 幻想最ㄎㄧㄤ團員<br>
             </p>
         </div>
-        <div class="jim">
+        <div class="jim  wow pulse">
             <a href="https://www.instagram.com/jimhu3/" target="_blank"><img src="photos/Jim.jpg" width="100%" class="img-circle"></a>
             <h1>胡臣均</h1>
             <p>
@@ -92,7 +103,7 @@
                 平常也很喜歡看電影<br>
             </p>
         </div> 
-        <div class="watermelon">
+        <div class="watermelon  wow pulse" >
             <a href="https://www.instagram.com/watermelon8257/" target="_blank"><img src="photos/watermelon.jpg" width="100%" class="img-circle"></a>
             <h1>李御嘉</h1>
             <p>
@@ -103,7 +114,7 @@
                 戴著眼鏡的長相跟拿下來時差了10萬倍<br>
             </p>
         </div>    
-        <div class="bob">
+        <div class="bob wow pulse" >
             <a href="https://www.instagram.com/ming_hsun/" target="_blank"><img src="photos/bob.PNG" width="100%" class="img-circle"></a>
             <h1>林明勳</h1>
             <p>
@@ -114,7 +125,7 @@
                 韓系歐霸<br>
             </p>
         </div>    
-        <div class="leo">
+        <div class="leo wow pulse ">
             <a href="https://www.instagram.com/leo228_love_228/" target="_blank"><img src="photos/Leo.jpg" width="100%" class="img-circle"></a>
             <h1>許程翔</h1>
             <p>
@@ -125,7 +136,7 @@
                 個性開放歡迎認識:))<br> 
             </p>
         </div>
-        <div class="blazey">
+        <div class="blazey wow pulse">
             <a href="https://www.instagram.com/blazeybeats/" target="_blank"><img src="photos/me.jpg" width="100%" class="img-circle"></a>
             <h1>苗人友</h1>
             <p>
@@ -136,10 +147,47 @@
                 但主要還是以beatbox闖天下<br> 
             </p>
         </div>
+        </div>
     </div>
-    </div>
-   
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script> 
+    
+ 
+</div>
+    
+<script src="js/wow.min.js"></script>
+    <script>
+     new WOW().init();
+    </script>
+<script src="https://gitcdn.xyz/repo/thesmart/jquery-scrollspy/0.1.3/scrollspy.js"></script>
+
+<!-- Modify after -->
+<script>
+  // Repeat demo content
+  var $body = $('body');
+  var $box = $('.box');
+  for (var i = 0; i < 20; i++) {
+    $box.clone().appendTo($body);
+  }
+
+  // Helper function for add element box list in WOW
+  WOW.prototype.addBox = function(element) {
+    this.boxes.push(element);
+  };
+
+  // Init WOW.js and get instance
+  var wow = new WOW();
+  wow.init();
+
+  // Attach scrollSpy to .wow elements for detect view exit events,
+  // then reset elements and add again for animation
+  $('.wow').on('scrollSpy:exit', function() {
+    $(this).css({
+      'visibility': 'hidden',
+      'animation-name': 'none'
+    }).removeClass('animated');
+    wow.addBox(this);
+  }).scrollSpy();
+
+</script>
+           
 </body>
 </html>

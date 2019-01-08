@@ -6,15 +6,73 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Imagine Vocal Band</title>
     <link href="photos/icon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link rel="stylesheet" href="css/contactus.css"> 
     <link rel="stylesheet" href="css/home.css">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link rel ="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <link href="css/contact.css" rel="stylesheet">
+    <script>
+        var firebase;
+        $(function(){
+          var $name = $('#name'),
+              $content = $('#content'),
+              $btn = $('#btn'),
+              $show = $('#show'),
+              ms = new Date().getTime();
+          var config = {
+            databaseURL: "https://project-7581816315211160801.firebaseio.com/"
+          };
+          firebase.initializeApp(config);
+          var database = firebase.database().ref();
+          
+          $btn.on('click',write);
+        
+          function write(){
+            window.location.reload();
+            var date = new Date();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            if(h<10){
+              h = '0'+h;
+            }
+            if(m<10){
+              m = '0' + m;
+            }
+            if(s<10){
+              s = '0' + s;
+            }
+            var now = h+':'+m+':'+s;
+            var postData = {
+              name:$('#name').val(),
+              content:$('#content').val(),
+              time:now,
+              id:'id'+ms
+            };
+            database.push(postData);
+            $content.val('');
+            
+          }
+          
+          database.once('value', function(snapshot) {
+            $show.html('');
+            for(var i in snapshot.val()){
+               $show.prepend('<div class="mes animated pulse" id="mes">'+snapshot.val()[i].name+'：'+snapshot.val()[i].content+'<div class="time">'+snapshot.val()[i].time+'</div></div>');
+            }
+          });
+          database.limitToLast(1).on('value', function(snapshot) {
+            for(var i in snapshot.val()){
+               $show.prepend('<div class="'+snapshot.val()[i].id+'"><div class="mes animated pulse" id="mes">'+snapshot.val()[i].name+'：'+snapshot.val()[i].content+'<div class="time">'+snapshot.val()[i].time+'</div></div></div>');
+            }
+          });    
+        });</script>
 </head>
 <body class="whole">
     <div class="middle">
-    <header>
+     <header>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="row" id="myNavbar">
@@ -32,9 +90,7 @@
                     <div class="collapse navbar-collapse" id="mynavbar">
                         <ul class="nav navbar-nav navbar-custom navbar-right">
                            
-                            <li class="page-scroll">
-                                <a href="index.html" class="nav-font">HOME</a>
-                            </li>
+                        
                             <li class="page-scroll">
                                 <a href="about.html"  class="nav-font">ABOUT</a>
                             </li>
@@ -48,7 +104,7 @@
                                 <a href="media.html" class="nav-font">MEDIA</a>
                             </li>
                             <li class="page-scroll">
-                                <a href="contactus.html" class="nav-font">CONTACT US</a>
+                                <a href="contactus.html" class="nav-font">MESSAGE BOARD</a>
                             </li>
                         </ul>
                     </div>
@@ -56,11 +112,18 @@
             </div>
         </nav>
     </header>
-<div class="content">
-    
-</div>
+    <hr width="100%" class="hr-top">
+        <h1 class="text-dark"><b>Message Board</b></h1>
+    <hr width="100%"> 
+        <h4>姓名：<input id="name"></h4>
+        <div class="chat">
+            <div><h4>聊天：</h4></div><div><textarea id="content" rows="2" cols="20"></textarea></div>
+        </div>
+        </br>
+            <button id="btn" >送出資料</button></br></br>
+        <div id="show" class="shows"></div>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script> 
- 
 </body>
 </html>

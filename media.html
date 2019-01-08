@@ -11,10 +11,18 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link rel ="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    
+    <link rel="stylesheet" href="css/carousel.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/carousel.js"></script>
+    
 
 </head>
 <body class="whole">
+    <img src="photos/carouselbackground.jpg" id="carouselbackground" class="carouselbackground" width="100%" height="100%" style="display: none;">
     <div class="middle">
     <header>
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -34,9 +42,7 @@
                     <div class="collapse navbar-collapse" id="mynavbar">
                         <ul class="nav navbar-nav navbar-custom navbar-right">
                            
-                            <li class="page-scroll">
-                                <a href="index.html" class="nav-font">HOME</a>
-                            </li>
+                        
                             <li class="page-scroll">
                                 <a href="about.html"  class="nav-font">ABOUT</a>
                             </li>
@@ -50,7 +56,7 @@
                                 <a href="media.html" class="nav-font">MEDIA</a>
                             </li>
                             <li class="page-scroll">
-                                <a href="contactus.html" class="nav-font">CONTACT US</a>
+                                <a href="contactus.html" class="nav-font">MESSAGE BOARD</a>
                             </li>
                         </ul>
                     </div>
@@ -63,49 +69,49 @@
     <h1><b>Photos</b></h1>
     <hr width="100%">
     <div class="media-img">
-        <div class="container-media" width: 100%;>
+        <div class="container-media container-media1" width: 100%; >
             <img src="photos/hunger.png" class="image" width: 100%;>
             <div class="overlay" width: 100%;>
                 <div class="text">花蓮飢餓30</div>                
             </div>
         </div>
-        <div class="container-media" width: 100%;>
+        <div class="container-media container-media2" width: 100%;>
             <img src="photos/2017tcmc.png" class="image" width: 100%;>
             <div class="overlay" width: 100%;>
                 <div class="text">全國賽冠軍!</div>
             </div>
         </div>
-        <div class="container-media" width: 100%;>
-            <img src="photos/dtdkareoke.png" class="image" width: 100%;>
+        <div class="container-media container-media3" width: 100%;>
+            <img src="photos/dtdkareoke.png"  class="image" width: 100%;>
             <div class="overlay" width: 100%;>
                 <div class="text">數位系卡</div>
             </div>
         </div>
-        <div class="container-media" width: 100%;>
-            <img src="photos/chvocals.png" class="image" width: 100%;>
-            <div class="overlay" width: 100%;>
+        <div class="container-media container-media4" width: 100%; >
+            <img src="photos/chvocals.png"  class="image" width: 100%;>
+            <div  class="overlay" width: 100%;>
                 <div class="text">六個半聯演</div>
             </div>
         </div>
-        <div class="container-media" width: 100%;>
+        <div class="container-media container-media5" width: 100%;>
             <img src="photos/dtdcamp.png" class="image" width: 100%;>
-            <div class="overlay" width: 100%;>
+            <div  class="overlay" width: 100%;>
                 <div class="text">數位營晚會</div>
             </div>
         </div>
-        <div class="container-media" width: 100%;>
+        <div class="container-media container-media6" width: 100%;>
             <img src="photos/2018taoyuan.png" class="image" width: 100%;>
             <div class="overlay" width: 100%;>
                 <div class="text">桃園藝術節</div>
             </div>
         </div>
-        <div class="container-media" width: 100%;>
+        <div class="container-media container-media7" width: 100%;>
             <img src="photos/blackie.png" class="image" width: 100%;>
-            <div class="overlay" width: 100%;>
+            <div  class="overlay" width: 100%;>
                 <div class="text">上班這黨事錄影!!</div>
             </div>
         </div>
-        <div class="container-media" width: 100%;>
+        <div class="container-media container-media8" width: 100%; >
             <img src="photos/2018tcmc.png" class="image" width: 100%;>
             <div class="overlay" width: 100%;>
                 <div class="text">世界賽第二名!</div>
@@ -123,8 +129,27 @@
             <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FTVBS42.work%2Fvideos%2F1968525096545723%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
     </div>
 </div>
-    <script src="js/jquery.min.js"></script>
+
+<div id="carouselborder" class="carouselborder">
+<div class="container-fluid">
+    
+            <img src="photos/hunger.png" alt="" class="hiddenimage1" style="display:none;">
+            <img src="photos/2017tcmc.png" alt="" class="hiddenimage2" style="display:none;">
+            <img src="photos/dtdkareoke.png" alt="" class="hiddenimage3" style="display:none;">
+            <img src="photos/chvocals.png" alt="" class="hiddenimage4" style="display:none;">
+            <img src="photos/dtdcamp.png" alt="" class="hiddenimage5" style="display:none;">
+            <img src="photos/2018taoyuan.png" alt="" class="hiddenimage6" style="display:none;">
+            <img src="photos/blackie.png" alt="" class="hiddenimage7" style="display:none;">
+            <img src="photos/2018tcmc.png" alt="" class="hiddenimage8" style="display:none;">
+      
+</div>
+</div>
+</div>
+<script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script> 
-</body>
+
+
+</body>  
+
 </html>
 
