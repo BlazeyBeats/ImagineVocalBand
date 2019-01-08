@@ -1,39 +1,24 @@
-if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
-    if (this.iosFix) {
-      if (!this.imageSrc) {
-        var img = this.$element.find('>.parallax-slider>img');
-        if (img.length == 1) {
-          this.imageSrc = img[0].currentSrc || img.attr('src');
-          this.$element.find('>.parallax-slider').remove();
+var isMobile = { 
+    Android: function() { return navigator.userAgent.match(/Android/i); }, 
+    BlackBerry: function() { return navigator.userAgent.match(/BlackBerry/i); }, 
+    iOS: function() { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, 
+    Opera: function() { return navigator.userAgent.match(/Opera Mini/i); }, 
+    Windows: function() { return navigator.userAgent.match(/IEMobile/i); }, 
+    any: function() { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
+
+    jQuery(function($) {
+        if (isMobile.any()) {
+            document.documentElement.className = document.documentElement.className + " touch";
+
+            $('.parallax-window').each(function(i, obj) {
+
+                $(this).css("background-image", 'url('+$(this).data('image-src')+')');
+                $(this).css("background-color", "#FFFFFF");
+                $(this).css("background-size", "cover");
+                $(this).css("background-position", "center center");
+
+
+            });
         }
-      }
-      if (this.imageSrc && this.androidFix && !this.$element.is('img')) {
-        this.$element.css({
-          backgroundImage: 'url(' + this.imageSrc + ')',
-          backgroundSize: 'cover',
-          backgroundPosition: this.position
-        });
-      }
-    }
-    return this;
-  }
-  
-  if (navigator.userAgent.match(/(Android)/)) {
-    if (this.androidFix) {
-      if (!this.imageSrc) {
-        var img = this.$element.find('>.parallax-slider>img');
-        if (img.length == 1) {
-          this.imageSrc = img[0].currentSrc || img.attr('src');
-          this.$element.find('>.parallax-slider').remove();
-        }
-      }
-      if (this.imageSrc && this.androidFix && !this.$element.is('img')) {
-        this.$element.css({
-          backgroundImage: 'url(' + this.imageSrc + ')',
-          backgroundSize: 'cover',
-          backgroundPosition: this.position
-        });
-      }
-    }
-    return this;
-  }
+
+    });
